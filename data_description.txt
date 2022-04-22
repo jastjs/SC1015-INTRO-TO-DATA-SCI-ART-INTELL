@@ -1,0 +1,77 @@
+month: Identifies month and year when the resale flat was put out for purchase (in format of yyyy-mm).
+
+town: Physical location of where the resale flat is located.
+
+	CENTRAL REGION	[BISHAN, BUKIT MERAH, BUKIT TIMAH, CENTRAL AREA, GEYLANG, KALLANG/WHAMPOA, MARINE PARADE, QUEENSTOWN, TOA PAYOH]
+	EAST REGION		[BEDOK, TAMPINES, PASIR RIS]
+	NORTH REGION	[WOODLANDS, YISHUN, LIM CHU KANG, SEMBAWANG]
+	NORTH-EAST REGION	[ANG MO KIO, HOUGANG, SENGKANG, SERANGOON, PUNGGOL]
+	WEST REGION		[BUKIT BATOK, CHOA CHU KANG, CLEMENTI, JURONG EAST, JURONG WEST, BUKIT PANJANG]
+	
+flat_type: Type of resale flat.
+
+	1 ROOM		[Bedroom, living room and kitchen are all one-room]
+	2 ROOM		[Bedroom as 1 room, living room and kitchen as 1 room]
+	3 ROOM		[2 bedrooms, living room and kitchen]
+	4 ROOM		[3 bedrooms, living room and kitchen]
+	5 ROOM		[3 bedrooms, living room and kitchen, study room]
+	EXECUTIVE		[3 bedrooms, bigger living room and kitchen]
+	MULTI GENERATION	[Current - 3 bedrooms, excluding living room]
+				[Previous (1980s) - 4-room or 5-room flat with an adjoining studio apartment that had a separate entrance]
+
+block: Block number of resale flat.
+
+street_name: Address of resale flat.
+
+storey_range: Storey of which resale flat is located in the HDB building.
+
+	01 TO 03
+	01 TO 05
+	04 TO 06
+	07 TO 09
+	06 TO 10
+	10 TO 12
+	11 TO 15
+	13 TO 15
+	16 TO 18
+	19 TO 21
+	16 TO 20
+	21 TO 25
+	22 TO 24
+	25 TO 27
+	26 TO 30
+	28 TO 30
+	31 TO 33
+	31 TO 35
+	34 TO 36
+	37 TO 39
+	36 TO 40
+	40 TO 42
+	43 TO 45
+	46 TO 48
+	49 TO 51
+		
+floor_area_sqm: Size of resale flat in square meters.
+
+flat_model: Model of resale flat.
+
+	IMPROVED		[Difference only in floor plan]
+	NEW GENERATION	[Difference only in floor plan]
+	MODEL A		[Difference only in floor plan]
+	STANDARD		[Difference only in floor plan]
+	SIMPLIFIED		[Difference only in floor plan]
+	MAISONETTE		[2-level flat, normally multiple units in 1 HDB building]
+	APARTMENT		[1-level flat]
+	TERRACE		[2-level flat, but a stand-alone building]
+	2-ROOM		[Bedroom as 1 room, living room and kitchen as 1 room]
+	MULTI GENERATION	[Current - 3 bedrooms, excluding living room]
+				[Previous (1980s) - 4-room or 5-room flat with an adjoining studio apartment that had a separate entrance]
+	ADJOINED FLAT	[2 individual flats purchased side by side, and the owners link both units together]
+	TYPE S		[Special types, different unit variations – with dissimilar combinations of features such as extended bays, balconies, bay windows and planter areas (i.e. The Pinnacle@Duxton)]
+	LOFT APARTMENT	[Flats with high ceiling, 1 staircase and 1 room on the top, normally located at the top of the building ]
+		
+lease_commerce_date: Year which the lease commerced for the resale flat.
+		
+resale_price: Price which the resale flat was put out for.
+	
+remaining_lease: HDB flats are sold on 99-year leases. Once lease is expired, the flat will be returned to the state to be recycled for future house generations.
