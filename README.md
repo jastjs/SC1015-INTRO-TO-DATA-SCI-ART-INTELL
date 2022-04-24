@@ -53,3 +53,6 @@ A text file(data_description.txt) has been created for detailed descriptions for
 ## References
 * Resale Flat Prices https://data.gov.sg/dataset/resale-flat-prices
 * Singapore Regions https://data.gov.sg/dataset/master-plan-2019-subzone-boundary-no-sea
+* Correlation and Linear Regression http://sites.utexas.edu/sos/guided/inferential/numeric/bivariate/cor/
+* Residual Plot Histogram https://www.originlab.com/doc/Origin-Help/Residual-Plot-Analysis
+* Linear Regression https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/
