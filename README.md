@@ -2,25 +2,6 @@
 Introduction to Data Science and Artificial Intelligence  
 Mini Project - Resale Flat Prices
 
-## Contributors
-@joxywfs - JOEY LIM HUI MING  
-* Interview Property Agent
-* Data Cleaning
-* Exploratory Data Analysis  
-* Slides and Script
- 
-@Sa3manthaLim - LIM SHI TONG  
-* Data Cleaning
-* Exploratory Data Analysis  
-* Random Forest Regression
-* Slides
- 
-@jastjs - TOH JING SHENG  
-* Data Extraction & Cleaning
-* Exploratory Data Analysis
-* Linear Regression
-* Slides
-
 ## Problem Definition
 The data science problem that we have created is to:
 1. Identify the drivers for each generations (1990s, 2000s, 2010s and 2020s).
@@ -88,6 +69,24 @@ We have also previously mentioned that despite the fact that floor area sqm are 
 
 Both algorithms show that 2010s data is more similar to the 2020s, hence we can use that generation's data to aid our financial planning when purchasing resale flats.
 
+## Contributors
+@joxywfs - JOEY LIM HUI MING  
+* Interview Property Agent
+* Data Cleaning
+* Exploratory Data Analysis  
+* Slides and Script
+ 
+@Sa3manthaLim - LIM SHI TONG  
+* Data Cleaning
+* Exploratory Data Analysis  
+* Random Forest Regression
+* Slides
+ 
+@jastjs - TOH JING SHENG  
+* Data Extraction & Cleaning
+* Exploratory Data Analysis
+* Linear Regression
+* Slides
 
 ## References
 * Resale Flat Prices https://data.gov.sg/dataset/resale-flat-prices
