@@ -23,7 +23,7 @@ We have engaged a professional property agent to better understand the dataset t
 A text file(data_description.txt) has been created for detailed descriptions for each of the columns.
 
 ## Exploratory Data Analysis
-1. Looking at the resale price line graph from 1990 to 2022 based on flat types. We inferred that there are some flat types, which (apartment) prices only rise back to its previous peak vs (the rest) prices that have reached an all time high.  
+1. Looking at the resale price line graph from 1990 to 2022 based on flat types. We inferred that there are some flat types, which (apartment) prices only rise back to its previous peak vs (the rest) prices that have reached an all time high. We have mentioned the increase and decrease of resale prices based on certain factors such as recession, economy recovery and supply-and-demand.
 2. Flat Type vs Region - We observed that most of the 3 room resale flats are located in the Central region and most of the 4 room resale flats are located in the West region. However, when we compare the data as a whole, we have actually calculated and found that most of the resale flats are located in West region.
 3. Resale Price vs Region - We observed that despite the fact that most resale flats are located in West region in previous slide, the resale price peaks for East region in 1990s and 2000s, while the peak has shifted to Central region in 2010s. Thus, we can conclude that number of resale flats in sale for a certain region does not significantly affect resale prices of that region. When we compare the data as a whole, we will realise that resale price actually peaks for North-East region instead of the previous regions mentioned.
 4. Map Visualisation of the resale price peaks had been preparerd as mentioned previously for better illustration. Peak for East region in 1990s and 2000s, peak for Central region in 2010s. Overall, peak for North-East region.
@@ -71,7 +71,7 @@ Both algorithms show that 2010s data is more similar to the 2020s, hence we can 
 
 ## Contributors
 @joxywfs - JOEY LIM HUI MING  
-* Interview Property Agent
+* Interviewed Property Agent
 * Data Cleaning
 * Exploratory Data Analysis  
 * Slides and Script
