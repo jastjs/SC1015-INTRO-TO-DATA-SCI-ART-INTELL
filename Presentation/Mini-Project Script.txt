@@ -1,0 +1,101 @@
+Hello and background
+
+Greetings professors, we are Joey, Jing Sheng and Shi Tong. We are Team 1 in PT1, the part-time group. Today we will be presenting on the SC1015 Mini project, which we will be talking about the resale flat pricing datasets from as late as 1990s to March 2022 (source taken from Data.gov.sg which is managed by Housing and Development Board, also known as HDB).
+
+
+
+Problem Definition and Motivation
+
+The data science problem that we have created is to identify the drivers for each generations (1990s, 2000s, 2010s and 2020s) as well as to observe if recession affects the resale prices for specific flat types and models. (flat type - 3, 4, 5 room and executive + flat model - improved, new generation, model a, standard, simplified, maisonette and apartment). This will help us to better analyse the factors which contributes to the increase of resale prices, so that we will be able to perform financial planning when purchasing a resale flat in the future.
+
+
+
+Data cleaning
+
+Firstly, we will be talking about the data cleaning process. We have engaged a professional property agent to better understand the dataset that we are handling and have performed data cleaning for the following columns: (read off slides and give example when needed). Further details can be found in the notebook.
+
+
+
+EDA
+
+Next, we will be moving on to the Exploratory Data Analysis portion. Based on this graph, we are looking at the resale price from 1990 to 2022 based on flat types. We can infer that there are some flat types, which (apartment) prices only rise back to its previous peak vs (the rest) prices that have reached an all time high.
+
+
+Flat Type vs Region - From here, we can see that most of the 3 room resale flats are located in the Central region and most of the 4 room resale flats are located in the West region. However, when we compare the data as a whole, we have actually calculated and found that most of the resale flats are located in West region.
+
+1990 to 1999
+Central	East		North		NE		West
+65,608	68,757	37,557	45,050	70,224
+
+2000 to 2009
+60,697	58,746	55,948	53,325	80,612
+
+2010 to 2019
+41,280	34,602	36,930	48,315	52,808
+
+Overall
+178,292	171,406	138,638	163,156	216,175
+
+
+Resale Price vs Region - From here, we can see that despite the fact that most resale flats are located in West region in previous slide, the resale price peaks for East region in 1990s and 2000s, while the peak has shifted to Central region in 2010s. Thus, we can conclude that number of resale flats in sale for a certain region does not significantly affect resale prices of that region. When we compare the data as a whole, we will realise that resale price actually peaks for NE region instead of the previous regions mentioned.
+
+We have prepared map visualisation of the resale price peaks as mentioned previously for better illustration.
+Peak for East region in 1990s and 2000s, peak for Central region in 2010s. Overall, peak for North-East region.
+
+
+Resale Price vs Flat Model - From here, we can see that the resale prices has increased over the past decades in general (give example), and that those rare flat models (i.e. Type S) are of high value in current market. (Mention about the different flat models but same flat type, 1990s - Model A & New Generation, 2000s - Same amount for Model A & New Generation; increase in Improved, 2010s - Mainly model A)
+
+1990 to 1999
+2 room	Adjoined Flat	Apartment	DBSS		Improved	Maisonette		Model A	MultiGen	NewGen	Simplified		Standard	Terrace	Type S
+21		0			9907		0		73,589	13,241		70,381	279		78,898	23,258		17,375	247		0	
+
+2000 to 2009
+5,634		671			26,154	0		83,531	8,667			90,074	137		61,194	18,882		14,148	236		0
+
+2010 to 2019
+3,332		381			28,604	1,213		56,252	6,589			62,389	82		35,478	11,206		7,873		151		373
+
+Overall
+9,540		1,155			73,943	2,595		227,634	30,367		242,132	529		182,200	55,347		41,045	670		544
+
+
+Correlation Matrix - From here, we can see that the correlation between floor area sqm and resale price has fallen over the decades. Correlation between floor area sqm and lease left briefly increased but drops down. Correlation between resale price and lease left briefly increased but not significant enough to be noted. As a whole, we can conclude that while the correlation between floor area sqm and resale price has fallen over the decades, they are still linearly correlated to a certain extend. For the rest, they are not correlated so much to resale price, especially lease left (which is almost close to 0).
+
+
+For machine learning, we have worked on the following algorithms, Linear Regression and Random Forest. For linear regression, we have used this algorithm to predict the resale price against least left and floor area sqm. As for Random Forest, we have used this algorithm to look at the feature that are of importance when compared against resale price.
+
+
+Linear Regression - 
+From the model evaluations over the decades, we can see that lease_left have become an important variable to determine resale price. That is because holding all other features fixed, a 1 unit increase in lease_left is associated with an increase of $1400 in period of 2010 to 2019. Compared to previous decades where it has a value of -$3700 and -$800.
+
+Model Predictions -
+For the period of 1990 to 1999, the model have a positive correlation of 0.40 against the test data. 
+The residuals distribution is skewed to the right.
+For the period of 2000 to 2009, the model have a positive correlation of 0.57 against the test data. 
+The residuals distribution is also skewed to the right.
+For the period of 2010 to 2019, the model have a positive correlation of 0.67 against the test data. Which is the highest across all three decades. 
+The residuals distribution is slightly skewed to the right. 
+
+Model Comparison -
+R2: We can see that the lowest explained variance (R-Squared), MSE and RMSE value is in the 2010s period.
+
+
+Random Forest - From the training datasets, OOB Rsquared score estimate and cross validation score gets closer with each gen. The 2010s data is seen to have the best scores, fitting the model the best.
+
+As seen from all the gen, the biggest nonnumerical driver is flat type. Out of all the non-numerical variables other than flat types, flat model_model A affects the price in 1990s the most, while region_Central affects the price in 2000s and 2010s most. 
+
+Out of all the generations, 2010's would be the most similar to 2020s as seen from the score being the best. As such, we can predict that the drivers for 2020s would likely be similar to 2010s drivers. 
+
+
+Conclusion
+
+Drivers affecting each period: Flat models and region plays a big part in the increase of resale prices. 1990s and 2000s - most of resale prices peak for the East region, and 2010s - most peak for Central region. We have also previously mentioned that despite the fact that floor area sqm are going down as decades pass, the resale price still continues to increase.
+
+Recession: We have also went through the fact that recession actually affects the resale prices, making that period a good time to purchase resale flats.
+
+Linear Regression: We have learnt that using linear regression model against time series data, works best with data that are much closer to the current date.
+
+Random Forest: 
+
+Both algorithms show that 2010s data is more similar to the 2020s, hence we can use that generation's data to aid our financial planning when purchasing resale flats.
+
