@@ -1,18 +1,28 @@
 Hello and background
 
-Greetings professors, we are Joey, Jing Sheng and Shi Tong. We are Team 1 in PT1, the part-time group. Today we will be presenting on the SC1015 Mini project, which we will be talking about the resale flat pricing datasets from as late as 1990s to March 2022 (source taken from Data.gov.sg which is managed by Housing and Development Board, also known as HDB).
+Greetings professors, we are Joey, Jing Sheng and Shi Tong. We are Group A, in the part-time group. Today we will be presenting on the SC1015 Mini project, which we will be talking about the resale flat pricing datasets from as late as 1990s to March 2022 (source taken from Data.gov.sg which is managed by Housing and Development Board, also known as HDB).
 
 
 
 Problem Definition and Motivation
 
-The data science problem that we have created is to identify the drivers for each generations (1990s, 2000s, 2010s and 2020s) as well as to observe if recession affects the resale prices for specific flat types and models. (flat type - 3, 4, 5 room and executive + flat model - improved, new generation, model a, standard, simplified, maisonette and apartment). This will help us to better analyse the factors which contributes to the increase of resale prices, so that we will be able to perform financial planning when purchasing a resale flat in the future.
+The data science problem that we have created is to identify the drivers for each generations (1990s, 2000s, 2010s and 2020s) as well as to observe if recession affects the resale prices for specific flat types and models. (flat type - 3, 4, 5 room and executive + flat model - improved, new generation, model a, standard, simplified, maisonette and apartment).
+
+This will help us to better analyse the factors which contributes to the increase of resale prices, so that we will be able to perform financial planning when purchasing a resale flat in the future.
 
 
 
 Data cleaning
 
-Firstly, we will be talking about the data cleaning process. We have engaged a professional property agent to better understand the dataset that we are handling and have performed data cleaning for the following columns: (read off slides and give example when needed). Further details can be found in the notebook.
+Firstly, we will be talking about the data cleaning process. We have engaged a professional property agent to better understand the dataset that we are handling and have performed data cleaning for the following columns: (read off slides and give example when needed). 
+
+Combined individual town into regions such as N S E W and NE.
+Combined storey range and split them 15 by 15 as there are a wide range of storey data in the dataset and that there are flats which are located as high as storey level 45.
+Split month and year into decades as we are looking at the data based on generations.
+For dataset in the 1990s, the lease left column contained Null values, hence we have performed calculations of the lease left by minusing the year with lease commence date.
+Cleaned up the flat type and flat models as some of the naming convention is different but the data are the same.
+
+Further details can be found in the notebook.
 
 
 
@@ -20,6 +30,9 @@ EDA
 
 Next, we will be moving on to the Exploratory Data Analysis portion. Based on this graph, we are looking at the resale price from 1990 to 2022 based on flat types. We can infer that there are some flat types, which (apartment) prices only rise back to its previous peak vs (the rest) prices that have reached an all time high.
 
+1997 - Asian Financial Crisis
+2001 - 9/11 attack
+2019 - Start of Covid
 
 Flat Type vs Region - From here, we can see that most of the 3 room resale flats are located in the Central region and most of the 4 room resale flats are located in the West region. However, when we compare the data as a whole, we have actually calculated and found that most of the resale flats are located in West region.
 
@@ -62,7 +75,7 @@ Overall
 Correlation Matrix - From here, we can see that the correlation between floor area sqm and resale price has fallen over the decades. Correlation between floor area sqm and lease left briefly increased but drops down. Correlation between resale price and lease left briefly increased but not significant enough to be noted. As a whole, we can conclude that while the correlation between floor area sqm and resale price has fallen over the decades, they are still linearly correlated to a certain extend. For the rest, they are not correlated so much to resale price, especially lease left (which is almost close to 0).
 
 
-For machine learning, we have worked on the following algorithms, Linear Regression and Random Forest. For linear regression, we have used this algorithm to predict the resale price against least left and floor area sqm. As for Random Forest, we have used this algorithm to look at the feature that are of importance when compared against resale price.
+For machine learning, we have worked on the following algorithms, Linear Regression and Random Forest. For linear regression, we have used this algorithm to predict the resale price against lease left and floor area sqm. As for Random Forest, we have used this algorithm to look at the feature that are of importance when compared against resale price.
 
 
 Linear Regression - 
@@ -95,7 +108,7 @@ Recession: We have also went through the fact that recession actually affects th
 
 Linear Regression: We have learnt that using linear regression model against time series data, works best with data that are much closer to the current date.
 
-Random Forest: 
+Random Forest: Random forest algorithm also points to the fact that data that are much closer to the current date have much better scores.
 
 Both algorithms show that 2010s data is more similar to the 2020s, hence we can use that generation's data to aid our financial planning when purchasing resale flats.
 
