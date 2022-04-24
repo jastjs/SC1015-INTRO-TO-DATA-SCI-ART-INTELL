@@ -2,9 +2,6 @@
 Introduction to Data Science and Artificial Intelligence  
 Mini Project - Resale Flat Prices
 
-## About 
-Using information from Resale Flat Prices dataset to identify drivers, factors that affect resale flat prices so as to better perform financial planning when purchasing a resale flat.
-
 ## Contributors
 @joxywfs - JOEY LIM HUI MING  
 * Interview Property Agent
@@ -27,8 +24,23 @@ Using information from Resale Flat Prices dataset to identify drivers, factors t
 ## Problem Definition
 The data science problem that we have created is to:
 1. Identify the drivers for each generations (1990s, 2000s, 2010s and 2020s).
-2. Observe if recession affects the resale prices for specific flat types and models (flat type - 3, 4, 5 room and executive + flat model - improved, new generation, model a, standard, simplified, maisonette and apartment).
-3. Better analyse the factors which contributes to the increase of resale prices.
+2. Observe if recession affects the resale prices for specific flat types and models   
+(flat type - 3, 4, 5 room and executive + flat model - improved, new generation, model a, standard, simplified, maisonette and apartment).
+4. Better analyse the factors which contributes to the increase of resale prices.
+ 
+So as to better perform financial planning when purchasing a resale flat.
+
+## Data Cleaning
+We have engaged a professional property agent to better understand the dataset that we are handling and have performed date cleaning for the following columns: 
+* Individual Town to Region
+* Combined Storey Range
+* Sorted Years into Decades
+* Calculation of Lease
+* Cleaning of Flat Type and Flat Models
+ 
+A text file(data_description.txt) has been created for detailed descriptions for each of the columns.
+
+## Exploratory Data Analysis
 
 ## Machine Learning Models
 1. Linear Regression
